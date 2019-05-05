@@ -1,0 +1,8 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/XxCreditIsGoodXx/MasterBuilders
+branches:
+- master
+projects:
+  MasterBuilders:
+    path: ""
+    icon: 426C36D6-0B1F-45E8-9BDC-0D7F17B371AA.png
+...
