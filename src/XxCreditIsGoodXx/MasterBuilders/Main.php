@@ -367,7 +367,7 @@ class Main extends PluginBase implements Listener
             $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
             $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
             $p->teleport(new Position(100,100,100));
-            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[11]);
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[16]);
             $p->sendMessage(TextFormat::GOLD."Vote for this build.");
             $p->sendMessage(TextFormat::GREEN."- green wool: great");
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
@@ -414,6 +414,41 @@ class Main extends PluginBase implements Listener
                 $p->getInventory()->clearAll();
             }
           $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins  ".$this->bb[11]);
+       } elseif((int)$this->bb[7] == $max){
+           foreach($this->getServer()->getOnlinePlayers() as $p){
+                $p->teleport(new Position($this->getConfig()->get("Spawn")));
+                $p->getInventory()->addItem(Item::get(1,0,1));
+                $p->getInventory()->clearAll();
+            }
+            $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins ".$this->bb[12]);
+      } elseif((int)$this->bb[8] == $max){
+           foreach($this->getServer()->getOnlinePlayers() as $p){
+                $p->teleport(new Position($this->getConfig()->get("Spawn")));
+                $p->getInventory()->addItem(Item::get(1,0,1));
+                $p->getInventory()->clearAll();
+            }
+            $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins ".$this->bb[13]);
+      } elseif((int)$this->bb[9] == $max){
+           foreach($this->getServer()->getOnlinePlayers() as $p){
+                $p->teleport(new Position($this->getConfig()->get("Spawn")));
+                $p->getInventory()->addItem(Item::get(1,0,1));
+                $p->getInventory()->clearAll();
+            }
+            $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins ".$this->bb[14]);
+      } elseif((int)$this->bb[10] == $max){
+            foreach($this->getServer()->getOnlinePlayers() as $p){
+                $p->teleport(new Position($this->getConfig()->get("Spawn")));
+                $p->getInventory()->addItem(Item::get(1,0,1));
+                $p->getInventory()->clearAll();
+            }
+            $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins ".$this->bb[15]);
+      } elseif((int)$this->bb[11] == $max){
+            foreach($this->getServer()->getOnlinePlayers() as $p){
+                $p->teleport(new Position($this->getConfig()->get("Spawn")));
+                $p->getInventory()->addItem(Item::get(1,0,1));
+                $p->getInventory()->clearAll();
+            }
+            $this->getServer()->broadcastMessage(TextFormat::RED."The BuildBattle Player Wins ".$this->bb[16]);
         }
         $this->bb = array();       
         $this->bb[0] = 0; // is the game running
@@ -424,21 +459,31 @@ class Main extends PluginBase implements Listener
         $this->bb[4] = 0; // overall rating of 3 built
         $this->bb[5] = 0; // overall rating of 4 built
         $this->bb[6] = 0; // overall rating of 5 built
+        $this->bb[7] = 0; // overall rating of 6 built
+        $this->bb[8] = 0; // overall rating of 7 built
+        $this->bb[9] = 0; // overall rating of 8 built
+        $this->bb[10] = 0; // overall rating of 9 built
+        $this->bb[11] = 0; // overall rating of 10 built
+        
+        $this->bb[12] = 0; // nickname builder 1 built
+        $this->bb[13] = 0; // nickname builder 2 built
+        $this->bb[14] = 0; // nickname builder 3 built       
+        $this->bb[15] = 0; // nickname builder 4 built
+        $this->bb[16] = 0; // nickname builder 5 built
+        $this->bb[17] = 0; // nickname builder 6 built
+        $this->bb[18] = 0; // nickname builder 7 built
+        $this->bb[19] = 0; // nickname builder 8 built
+        $this->bb[20] = 0; // nickname builder 9 built
+        $this->bb[21] = 0; // nickname builder 10 built
       
-        $this->bb[7] = 0; // nickname builder 1 built
-        $this->bb[8] = 0; // nickname builder 2 built
-        $this->bb[9] = 0; // nickname builder 3 built       
-        $this->bb[10] = 0; // nickname builder 4 built
-        $this->bb[11] = 0; // nickname builder 5 built
-      
-        $this->bb[12] = 0; // in which arena are the players
+        $this->bb[22] = 0; // in which arena are the players
     }
     public function PlayerItemHeldEvent(PlayerItemHeldEvent $event){
         $i = $event->getItem();
         $p = $event->getPlayer();
         if($i->getId() == 35 && $i->getDamage() == 5){
-            $p->sendMessage(TextFormat::GREEN."You successfully left a voice!");
-            $p->sendTip(TextFormat::GREEN."You successfully left a voice!");
+            $p->sendMessage(TextFormat::GREEN."You successfully left a game!");
+            $p->sendTip(TextFormat::GREEN."You successfully left a game!");
             $event->setCancelled(true);
             if($this->bb[12] == "1"){
                 $this->bb[2] = (int)$this->bb[2] + 3;
@@ -450,12 +495,22 @@ class Main extends PluginBase implements Listener
                 $this->bb[5] = (int)$this->bb[2] + 3;
             } elseif($this->bb[12] == "5"){
                 $this->bb[6] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "6"){
+                $this->bb[7] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "7"){
+                $this->bb[8] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "8"){
+                $this->bb[9] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "9"){
+                $this->bb[10] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "10"){
+                $this->bb[11] = (int)$this->bb[2] + 3;
             }
             $event->getPlayer()->getInventory()->addItem(Item::get(1,0,1));
             $p->getInventory()->clearAll();
         } elseif($i->getId() == 35 && $i->getDamage() == 4){
-            $p->sendMessage(TextFormat::YELLOW."You successfully left a voice!");
-            $p->sendTip(TextFormat::YELLOW."You successfully left a voice!");
+            $p->sendMessage(TextFormat::YELLOW."You successfully left a game!");
+            $p->sendTip(TextFormat::YELLOW."You successfully left a game!");
             $event->setCancelled(true);
             if($this->bb[12] == "1"){
                 $this->bb[2] = (int)$this->bb[2] + 2;
@@ -467,12 +522,22 @@ class Main extends PluginBase implements Listener
                 $this->bb[5] = (int)$this->bb[2] + 2;
             } elseif($this->bb[12] == "5"){
                 $this->bb[6] = (int)$this->bb[2] + 2;
+            } elseif($this->bb[12] == "6"){
+                $this->bb[7] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "7"){
+                $this->bb[8] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "8"){
+                $this->bb[9] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "9"){
+                $this->bb[10] = (int)$this->bb[2] + 3;                
+            } elseif($this->bb[12] == "10"){
+                $this->bb[11] = (int)$this->bb[2] + 3;
             }
             $event->getPlayer()->getInventory()->addItem(Item::get(1,0,1));
             $p->getInventory()->clearAll();
         } elseif($i->getId() == 35 && $i->getDamage() == 14){
-            $p->sendMessage(TextFormat::RED."You successfully left a voice!");
-            $p->sendTip(TextFormat::RED."You successfully left a voice!");
+            $p->sendMessage(TextFormat::RED."You successfully left a game!");
+            $p->sendTip(TextFormat::RED."You successfully left a game!");
             $event->setCancelled(true);
             if($this->bb[12] == "1"){
                 $this->bb[2] = (int)$this->bb[2] + 1;
@@ -484,13 +549,23 @@ class Main extends PluginBase implements Listener
                 $this->bb[5] = (int)$this->bb[2] + 1;
             } elseif($this->bb[12] == "5"){
                 $this->bb[6] = (int)$this->bb[2] + 1;
+            } elseif($this->bb[12] == "6"){
+                $this->bb[7] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "7"){
+                $this->bb[8] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "8"){
+                $this->bb[9] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "9"){
+                $this->bb[10] = (int)$this->bb[2] + 3;
+            } elseif($this->bb[12] == "10"){
+                $this->bb[11] = (int)$this->bb[2] + 3;
             }
             $event->getPlayer()->getInventory()->addItem(Item::get(1,0,1));
             $p->getInventory()->clearAll();
         }
     }
     public function BlockBreakEvent(BlockBreakEvent $event){
-        if($event->getPlayer()->getGamemode() != 1){
+        if($event->getPlayer()->getGamemode() != 0){
             $event->setCancelled(true);
         } elseif($event->getBlock()->getId() == 20 && !$event->getPlayer()->isOp()){
             $event->setCancelled(true);
