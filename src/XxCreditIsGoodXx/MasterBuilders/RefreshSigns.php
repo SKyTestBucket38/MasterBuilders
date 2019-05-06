@@ -1,6 +1,6 @@
 <?php
 
-namespace XxCreditIsGoodXx\RefreshSigns;
+namespace XxCreditIsGoodXx\MasterBuilders;
 
 use pocketmine\tile\Sign;
 use pocketmine\utils\Config;
