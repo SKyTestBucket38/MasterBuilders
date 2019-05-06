@@ -67,7 +67,7 @@ class Main extends PluginBase implements Listener
         $p->setNameTagVisible(false);
         $p->setGamemode(0);
         $p->teleport(new Position($this->getConfig()->get("Spawn")));
-        if(count($this->getServer()->getOnlinePlayers()) >= 5){
+        if(count($this->getServer()->getOnlinePlayers()) >= 10){
             $this->getServer()->broadcastMessage(TextFormat::RED."Starting the game after 10 seconds!");
             $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "Start"]), 10 * 20 );
         } else {
@@ -333,7 +333,7 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::GREEN."- green wool: great");
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
-            $this->bb[12] = "5";
+            $this->bb[12] = "7";
    public function a8(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
@@ -572,7 +572,7 @@ class Main extends PluginBase implements Listener
         }
     }
     public function BlockPlaceEvent(BlockPlaceEvent $event){
-        if($event->getPlayer()->getGamemode() != 1){
+        if($event->getPlayer()->getGamemode() != 0){
             $event->setCancelled(true);
         } elseif($event->getBlock()->getId() == 20 && !$event->getPlayer()->isOp()){
             $event->setCancelled(true);
