@@ -89,12 +89,23 @@ class Main extends PluginBase implements Listener
             $online[2]->teleport(new Position($this->getConfig()->get("3")));
             $online[3]->teleport(new Position($this->getConfig()->get("4")));
             $online[4]->teleport(new Position($this->getConfig()->get("5")));
+            $online[5]->teleport(new Position($this->getConfig()->get("6")));
+            $online[6]->teleport(new Position($this->getConfig()->get("7")));
+            $online[7]->teleport(new Position($this->getConfig()->get("8")));
+            $online[8]->teleport(new Position($this->getConfig()->get("9")));
+            $online[9]->teleport(new Position($this->getConfig()->get("10")));
            
-            $this->bb[7] = $online[0]; // nickname builder 1 built
-            $this->bb[8] = $online[1]; // nickname builder 2 built
-            $this->bb[9] = $online[2]; // nickname builder 3 built
-            $this->bb[10] = $online[3]; // nickname builder 4 built
-            $this->bb[11] = $online[4]; // nickname builder 5 built
+            $this->bb[10] = $online[0]; // nickname builder 1 built
+            $this->bb[11] = $online[1]; // nickname builder 2 built
+            $this->bb[12] = $online[2]; // nickname builder 3 built
+            $this->bb[13] = $online[3]; // nickname builder 4 built
+            $this->bb[14] = $online[4]; // nickname builder 5 built
+            $this->bb[15] = $online[5]; // nickname builder 6 built
+            $this->bb[16] = $online[6]; // nickname builder 7 built
+            $this->bb[17] = $online[7]; // nickname builder 8 built
+            $this->bb[18] = $online[8]; // nickname builder 9 built
+            $this->bb[19] = $online[9]; // nickname builder 10 built
+            
             foreach($this->getServer()->getOnlinePlayers() as $p){
             
                 $p->setGamemode(1);
@@ -102,8 +113,8 @@ class Main extends PluginBase implements Listener
             $r = mt_rand(1,10);
             if($r == 1){
                 $this->bb[1] = "Bridge";
-                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a bridge within 3 minutes");
-                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 3 * 60 * 20 );
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a bridge within 5 minutes");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
             } elseif($r == 2){
                 $this->bb[1] = "Computer";
                 $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a computer in 5 minutes");
