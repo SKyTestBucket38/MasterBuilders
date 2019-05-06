@@ -28,11 +28,9 @@ It turns out you need to move the plugin on the servers.
 
 ## Coming Soon 
 
-* More Slots for players to join - beta2
 
-* JoinSign- beta3
+* JoinSign- link
 
-* More themes and topics - beta2
 
 # Credit
 
