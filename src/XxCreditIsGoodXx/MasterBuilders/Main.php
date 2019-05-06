@@ -33,14 +33,25 @@ class Main extends PluginBase implements Listener
         $this->bb[4] = 0; // overall rating of 3 built
         $this->bb[5] = 0; // overall rating of 4 built
         $this->bb[6] = 0; // overall rating of 5 built
+        $this->bb[7] = 0; // overall rating of 6 built
+        $this->bb[8] = 0; // overall rating of 7 built
+        $this->bb[9] = 0; // overall rating of 8 built
+        $this->bb[10] = 0; // overall rating of 9 build
+        $this->bb[11] = 0; // overall rating of 10 built
         
-        $this->bb[7] = 0; // nickname builder 1 built
-        $this->bb[8] = 0; // nickname builder 2 built
-        $this->bb[9] = 0; // nickname builder 3 built
-        $this->bb[10] = 0; // nickname builder 4 built
-        $this->bb[11] = 0; // nickname builder 5 built
+        $this->bb[12] = 0; // nickname builder 1 built
+        $this->bb[13] = 0; // nickname builder 2 built
+        $this->bb[14] = 0; // nickname builder 3 built
+        $this->bb[15] = 0; // nickname builder 4 built
+        $this->bb[16] = 0; // nickname builder 5 built
+        $this->bb[17] = 0; // nickname builder 6 built
+        $this->bb[18] = 0; // nickname builder 7 built      
+        $this->bb[19] = 0; // nickname builder 8 built   
+        $this->bb[20] = 0; // nickname builder 9 built
+        $this->bb[21] = 0; // nickname builder 10 built
         
-        $this->bb[12] = 0; // in which arena are the players
+        $this->bb[22] = 0; // in which arena are the players
+        
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask(array($this, "Popup")), 10);
         if (!file_exists($this->getDataFolder() . "config.yml")) {
             @mkdir($this->getDataFolder());
@@ -61,14 +72,14 @@ class Main extends PluginBase implements Listener
             $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "Start"]), 10 * 20 );
         } else {
             $p->sendMessage(TextFormat::GOLD.'You have joined the BuildBattle lineup..');
-            $p->sendMessage(TextFormat::GOLD.'As the number of players reaches 5, you will start the game..');
+            $p->sendMessage(TextFormat::GOLD.'As the number of players reaches 10, you will start the game..');
         }
     }
     public function PlayerQuitEvent(PlayerQuitEvent $event){
         $event->getPlayer()->getInventory()->clearAll();
     }
     public function Start(){
-        if(count($this->getServer()->getOnlinePlayers()) >= 5){
+        if(count($this->getServer()->getOnlinePlayers()) >= 10){
             $this->getServer()->broadcastMessage(TextFormat::RED."The start of the game was canceled. Someone left the server.");
         } else {
             $this->getServer()->broadcastMessage(TextFormat::RED."The game has begun!");
