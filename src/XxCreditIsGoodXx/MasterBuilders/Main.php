@@ -53,6 +53,7 @@ class Main extends PluginBase implements Listener
         $this->bb[22] = 0; // in which arena are the players
         
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new CallbackTask(array($this, "Popup")), 10);
+        $this->getServer()->getScheduler()->scheduleRepeatingTask(new RefreshSigns($this), 20);
         if (!file_exists($this->getDataFolder() . "config.yml")) {
             @mkdir($this->getDataFolder());
             file_put_contents($this->getDataFolder() . "config.yml", $this->getResource("config.yml"));
