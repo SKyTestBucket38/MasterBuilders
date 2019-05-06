@@ -151,6 +151,59 @@ class Main extends PluginBase implements Listener
                 $this->bb[1] = "Shark";
                 $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a shark within 3 mintues");
                 $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 2 * 60 * 20 );
+            } elseif($r == 11){
+                $this->bb[1] = "Baby";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a baby within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 12){
+                $this->bb[1] = "Burger";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a burger within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 13){
+                $this->bb[1] = "Dragon";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Dragon within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 14){
+                $this->bb[1] = "Volcano";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Volcano within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 15){
+                $this->bb[1] = "Treehouse";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Treehouse within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 16){
+                $this->bb[1] = "Waterfall";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Waterfall within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 17){
+                $this->bb[1] = "Dragon";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Dragon within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 18){
+                $this->bb[1] = "Disney";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build Disney within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 19){
+                $this->bb[1] = "Superhero";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Superhero within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 20){
+                $this->bb[1] = "Mine";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a Mine within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 21){
+                $this->bb[1] = "Village";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a village within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 22){
+                $this->bb[1] = "Villain";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a villain within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+            } elseif($r == 23){
+                $this->bb[1] = "Winter";
+                $this->getServer()->broadcastMessage(TextFormat::GOLD."Build a winter theme within 5 mintues ");
+                $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "min1"]), 4 * 60 * 20 );
+
             }
             $this->bb[0] = 1;
         }
@@ -175,7 +228,12 @@ class Main extends PluginBase implements Listener
         $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a3"]), 60 * 20 );
         $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a4"]), 80 * 20 );
         $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a5"]), 100 * 20 );
-        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "stats"]), 120 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a6"]), 120 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a7"]), 140 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a8"]), 160 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a9"]), 180 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "a10"]), 200 * 20 );
+        $this->getServer()->getScheduler()->scheduleDelayedTask(new CallbackTask([$this, "stats"]), 220 * 20 );
     }
     public function a1(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
@@ -250,6 +308,71 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "5";
+    public function a6(){
+        foreach ($this->getServer()->getOnlinePlayers() as $p) {
+            $p->setGamemode(0);
+            $p->getInventory()->setItem(1, Item::get(35,5,1)); // OK
+            $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
+            $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
+            $p->teleport(new Position(100,100,100));
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[12]);
+            $p->sendMessage(TextFormat::GOLD."Vote for this build.");
+            $p->sendMessage(TextFormat::GREEN."- green wool: great");
+            $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
+            $p->sendMessage(TextFormat::RED."- red wool: bad");
+            $this->bb[12] = "6";
+   public function a7(){
+        foreach ($this->getServer()->getOnlinePlayers() as $p) {
+            $p->setGamemode(0);
+            $p->getInventory()->setItem(1, Item::get(35,5,1)); // OK
+            $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
+            $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
+            $p->teleport(new Position(100,100,100));
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[13]);
+            $p->sendMessage(TextFormat::GOLD."Vote for this build.");
+            $p->sendMessage(TextFormat::GREEN."- green wool: great");
+            $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
+            $p->sendMessage(TextFormat::RED."- red wool: bad");
+            $this->bb[12] = "5";
+   public function a8(){
+        foreach ($this->getServer()->getOnlinePlayers() as $p) {
+            $p->setGamemode(0);
+            $p->getInventory()->setItem(1, Item::get(35,5,1)); // OK
+            $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
+            $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
+            $p->teleport(new Position(100,100,100));
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[14]);
+            $p->sendMessage(TextFormat::GOLD."Vote for this build.");
+            $p->sendMessage(TextFormat::GREEN."- green wool: great");
+            $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
+            $p->sendMessage(TextFormat::RED."- red wool: bad");
+            $this->bb[12] = "8";
+   public function a9(){
+        foreach ($this->getServer()->getOnlinePlayers() as $p) {
+            $p->setGamemode(0);
+            $p->getInventory()->setItem(1, Item::get(35,5,1)); // OK
+            $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
+            $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
+            $p->teleport(new Position(100,100,100));
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[15]);
+            $p->sendMessage(TextFormat::GOLD."Vote for this build.");
+            $p->sendMessage(TextFormat::GREEN."- green wool: great");
+            $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
+            $p->sendMessage(TextFormat::RED."- red wool: bad");
+            $this->bb[12] = "9";
+   public function a10(){
+        foreach ($this->getServer()->getOnlinePlayers() as $p) {
+            $p->setGamemode(0);
+            $p->getInventory()->setItem(1, Item::get(35,5,1)); // OK
+            $p->getInventory()->setItem(1, Item::get(35,4,1)); // Good
+            $p->getInventory()->setItem(1, Item::get(35,14,1)); // Bad
+            $p->teleport(new Position(100,100,100));
+            $p->sendMessage(TextFormat::GOLD."This Construction is made from the player  ".$this->bb[11]);
+            $p->sendMessage(TextFormat::GOLD."Vote for this build.");
+            $p->sendMessage(TextFormat::GREEN."- green wool: great");
+            $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
+            $p->sendMessage(TextFormat::RED."- red wool: bad");
+            $this->bb[12] = "10";
         }
     }
     public function stats(){
