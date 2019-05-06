@@ -308,6 +308,8 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "5";
+        }
+    }
     public function a6(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
@@ -321,6 +323,8 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "6";
+        }
+   }
    public function a7(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
@@ -334,6 +338,8 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "7";
+        }
+   }
    public function a8(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
@@ -347,6 +353,8 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "8";
+       }
+   }
    public function a9(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
@@ -360,6 +368,8 @@ class Main extends PluginBase implements Listener
             $p->sendMessage(TextFormat::YELLOW."- yellow wool: normal");
             $p->sendMessage(TextFormat::RED."- red wool: bad");
             $this->bb[12] = "9";
+       }
+   }
    public function a10(){
         foreach ($this->getServer()->getOnlinePlayers() as $p) {
             $p->setGamemode(0);
