@@ -63,54 +63,54 @@ Spawn: 0,0,0
 // Coordinates of the arena for the sixth player X,Y,Z
 6: 0,0,0
 // 1 and 2 arena points for its cleaning. (in the form of a cuboid)
-5aX: 0
-5aY: 0
-5aZ: 0
+6aX: 0
+6aY: 0
+6aZ: 0
 
-5bX: 0
-5bY: 0
-5bZ: 0
+6bX: 0
+6bY: 0
+6bZ: 0
 
 // Coordinates of the arena for the seventh player X,Y,Z
 7: 0,0,0
 // 1 and 2 arena points for its cleaning. (in the form of a cuboid)
-5aX: 0
-5aY: 0
-5aZ: 0
+7aX: 0
+7aY: 0
+7aZ: 0
 
-5bX: 0
-5bY: 0
-5bZ: 0
+7bX: 0
+7bY: 0
+7bZ: 0
 
 // Coordinates of the arena for the eigth player X,Y,Z
 8: 0,0,0
 // 1 and 2 arena points for its cleaning. (in the form of a cuboid)
-5aX: 0
-5aY: 0
-5aZ: 0
+8aX: 0
+8aY: 0
+8aZ: 0
 
-5bX: 0
-5bY: 0
-5bZ: 0
+8bX: 0
+8bY: 0
+8bZ: 0
 
 // Coordinates of the arena for the ninth player X,Y,Z
 9: 0,0,0
 // 1 and 2 arena points for its cleaning. (in the form of a cuboid)
-5aX: 0
-5aY: 0
-5aZ: 0
+9aX: 0
+9aY: 0
+9aZ: 0
 
-5bX: 0
-5bY: 0
-5bZ: 0
+9bX: 0
+9bY: 0
+9bZ: 0
 
 // Coordinates of the arena for the teneth player X,Y,Z
 10: 0,0,0
 // 1 and 2 arena points for its cleaning. (in the form of a cuboid)
-5aX: 0
-5aY: 0
-5aZ: 0
+10X: 0
+10aY: 0
+10aZ: 0
 
-5bX: 0
-5bY: 0
-5bZ: 0
+10bX: 0
+10bY: 0
+10bZ: 0
